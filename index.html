@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Get Unique Classes With Prefix</title>
+		
+		<meta name="description" content="Get unique classes with prefix">
+		<meta name="author" content="cK">
+		
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="scripts/jquery-1.8.3.js"></script>
+		<script type="text/javascript" src="scripts/get-unique-classes-with-prefix.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function($) {
+			$("#output").text("output = " + getUniqueClass($("#test div"), "ddd-").join(", "));
+		});
+		</script>
+	</head>
+	<body>
+		<div id="title"><h1>Get Unique Classes With Prefix</h1></div>
+		<div id="test">
+			<div class="ddd-1">ddd-1</div>
+			<div class="ddd-2">ddd-2</div>
+			<div class="zzz-1">zzz-1</div>
+			<div class="ddd-2">ddd-2</div>
+			<div class="zzz-2">zzz-2</div>
+			<div class="ddd-3">ddd-3</div>
+			<div class="zzz-3 ddd-3">zzz-3 ddd-3</div>
+		</div>
+		<br>
+		<div id="output"></div>
+	</body>
+</html>
